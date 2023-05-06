@@ -7,15 +7,19 @@ console.log("Please write you message")
 let st = process.openStdin();
 st.on("data", function(chunk) {
 
-    if (chunk.toString().trim() === 'exit') {
-        console.log("GOODBAY");
+     if (chunk.toString().trim() === 'exit') {
+        console.log("GOODBAY!");
         process.exit();
     } else {
 
-        console.log("Please, write your message")
+        console.log("Please, write your message:")
         stream.write(chunk);
 
     }
 
+    })
+    process.on("SIGINT", function(){
+        console.log("GOODBAY!");
+        process.exit();
     })
 
