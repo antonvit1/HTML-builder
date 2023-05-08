@@ -8,7 +8,7 @@ let st = process.openStdin();
 st.on("data", function(chunk) {
 
      if (chunk.toString().trim() === 'exit') {
-        console.log("GOODBAY!");
+        console.log("GOODBYE!");
         process.exit();
     } else {
 
@@ -19,7 +19,7 @@ st.on("data", function(chunk) {
 
     })
     process.on("SIGINT", function(){
-        console.log("GOODBAY!");
+        console.log("GOODBYE!");
         process.exit();
     })
 

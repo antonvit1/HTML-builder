@@ -31,7 +31,6 @@ function createFolderAndCopyFile() {
     filesInFolder.forEach((everyFile) => {
       const filePath = path.join(__dirname, "files", everyFile);
       copyFiles(filePath, path.join(__dirname, "files-copy", everyFile));
-      console.log(everyFile);
     });
   });
 }
