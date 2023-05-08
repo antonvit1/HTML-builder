@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const pathToText = path.join(__dirname, "/userText.txt");
 const stream = fs.createWriteStream(pathToText);
-console.log("Please write you message")
+console.log("Please, write you message")
 let st = process.openStdin();
 st.on("data", function(chunk) {
 
@@ -22,4 +22,4 @@ st.on("data", function(chunk) {
         console.log("GOODBYE!");
         process.exit();
     })
-
+// для появления текста в файле userText.txt необходимо сменить фокус
